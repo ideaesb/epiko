@@ -1,0 +1,417 @@
+<html t:type="input" title="Create Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+   <t:form t:id="dap" class="appnitro">
+   
+   <div class="form_description">
+     <h2>Eastern Region RCSD Data, Products &amp; Services (DAPS) Worksheet</h2>
+     <p>Use this form to add or update a DAPS record into EPiko (Worsheet Version April 27 2012)</p>
+   </div>		
+   
+   <t:errors/>
+
+   <ul>
+   
+     <li id="li_code">
+      <t:label class="description" for="code" />
+      <t:textField t:id="code" t:validate="maxlength=255" size="15" value="dap.code" />
+     </li>
+     
+     <li id="li_name">
+      <t:label class="description" for="name" />
+      <div>
+       <t:textArea t:id="name" t:validate="maxlength=255" rows="3" cols="90" value="dap.name" />
+      </div>
+     </li>
+
+     <li id="li_agency">
+      <t:label class="description" for="organization" />
+      <div>
+       <t:textArea t:id="organization" t:validate="maxlength=255" rows="3" cols="90" value="dap.organization" />
+      </div>
+     </li>
+
+     <li id="li_contact">
+      <t:label class="description" for="contact" />
+      <div>
+       <t:textArea t:id="contact" t:validate="maxlength=255" rows="2" cols="90" value="dap.contact" />
+      </div>
+     </li>
+    	<li id="li_url">
+	<t:label class="description" for="url" />
+	<t:textArea t:id="url" t:validate="maxlength=255" rows="3" cols="90" value="dap.url" />
+	</li>
+	<li id="li_description">
+	<t:label class="description" for="description" />
+	<t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="90" value="dap.description" />
+	</li>
+	<li id="li_keywords">
+	<t:label class="description" for="keywords" />
+	<t:textArea t:id="keywords" t:validate="maxlength=4096" rows="5" cols="90" value="dap.keywords" />
+	</li>
+	<li id="li_objectives">
+	<t:label class="description" for="objectives" />
+	<t:textArea t:id="objectives" t:validate="maxlength=255" rows="3" cols="90" value="dap.objectives" />
+	</li>
+	<li id="li_worksheet">
+	<t:label class="description" for="worksheet" />
+	<t:textArea t:id="worksheet" t:validate="maxlength=255" rows="3" cols="90" value="dap.worksheet" />
+	</li>
+	<li id="li_dates">
+	<t:label class="description" for="dates" />
+	<t:textArea t:id="dates" t:validate="maxlength=255" rows="3" cols="90" value="dap.dates" />
+	</li>
+	<li id="li_resources">
+	<t:label class="description" for="resources" />
+	<t:textArea t:id="resources" t:validate="maxlength=255" rows="3" cols="90" value="dap.resources" />
+	</li>
+	<li id="li_feedback">
+	<t:label class="description" for="feedback" />
+	<t:textArea t:id="feedback" t:validate="maxlength=255" rows="3" cols="90" value="dap.feedback" />
+	</li>
+		
+     
+     
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('statusBox');" title="Show or Hide">Status</legend>
+       <div id="statusBox" class="unhidden">
+        <t:checkbox t:id="ongoing" t:value="dap.ongoing" class="element checkbox" /><t:label for="ongoing" class="choice"/>
+        <t:checkbox t:id="planned" t:value="dap.planned" class="element checkbox" /><t:label for="planned" class="choice"/>
+        <t:checkbox t:id="proposed" t:value="dap.proposed" class="element checkbox" /><t:label for="proposed" class="choice"/>
+        <t:checkbox t:id="completed" t:value="dap.completed" class="element checkbox" /><t:label for="completed" class="choice" />
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('priorityBox');" title="Show or Hide">Priority</legend>
+       <div id="priorityBox" class="unhidden">
+		<t:checkbox t:id="high" t:value="dap.high"  class="element checkbox" /><t:label for="high" class="choice" />
+		<t:checkbox t:id="mid" t:value="dap.mid"  class="element checkbox" /><t:label for="mid" class="choice" />
+		<t:checkbox t:id="low" t:value="dap.low"  class="element checkbox" /><t:label for="low" class="choice" />
+		<t:checkbox t:id="unknown" t:value="dap.unknown"  class="element checkbox" /><t:label for="unknown" class="choice" />
+
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('focusBox');" title="Show or Hide">Focus Area</legend>
+       <div id="focusBox" class="unhidden">
+
+		<t:checkbox t:id="sustainability" t:value="dap.sustainability"  class="element checkbox" /><t:label for="sustainability" class="choice" />
+		<t:checkbox t:id="resilience" t:value="dap.resilience"  class="element checkbox" /><t:label for="resilience" class="choice" />
+		<t:checkbox t:id="water" t:value="dap.water"  class="element checkbox" /><t:label for="water" class="choice" />
+		<t:checkbox t:id="extremes" t:value="dap.extremes"  class="element checkbox" /><t:label for="extremes" class="choice" />
+		<t:checkbox t:id="conservation" t:value="dap.conservation"  class="element checkbox" /><t:label for="conservation" class="choice" />
+	
+
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('aoaBox');" title="Show or Hide">Area of Applicability</legend>
+       <div id="aoaBox" class="unhidden">
+
+		<t:checkbox t:id="international" t:value="dap.international"  class="element checkbox" /><t:label for="international" class="choice" />
+		<t:checkbox t:id="canada" t:value="dap.canada"  class="element checkbox indent" /><t:label for="canada" class="indent" />
+		<t:checkbox t:id="newBrunswick" t:value="dap.newBrunswick"  class="element checkbox indent2" /><t:label for="newBrunswick" class="indent2" />
+		<t:checkbox t:id="novaScotia" t:value="dap.novaScotia"  class="element checkbox indent2" /><t:label for="novaScotia" class="indent2" />
+		<t:checkbox t:id="quebec" t:value="dap.quebec"  class="element checkbox indent2" /><t:label for="quebec" class="indent2" />
+		<t:checkbox t:id="princeEdwardIsland" t:value="dap.princeEdwardIsland"  class="element checkbox indent2" /><t:label for="princeEdwardIsland" class="indent2" />
+		<t:checkbox t:id="newfoundland" t:value="dap.newfoundland"  class="element checkbox indent2" /><t:label for="newfoundland" class="indent2" />
+		<t:checkbox t:id="labrador" t:value="dap.labrador"  class="element checkbox indent2" /><t:label for="labrador" class="indent2" />
+		<t:checkbox t:id="national" t:value="dap.national"  class="element checkbox" /><t:label for="national" class="choice" />
+		<t:checkbox t:id="regionalOrState" t:value="dap.regionalOrState"  class="element checkbox" /><t:label for="regionalOrState" class="choice" />
+		<t:checkbox t:id="newEngland" t:value="dap.newEngland"  class="element checkbox indent" /><t:label for="newEngland" class="indent" />
+		<t:checkbox t:id="maine" t:value="dap.maine"  class="element checkbox indent2" /><t:label for="maine" class="indent2" />
+		<t:checkbox t:id="newHampshire" t:value="dap.newHampshire"  class="element checkbox indent2" /><t:label for="newHampshire" class="indent2" />
+		<t:checkbox t:id="massachusetts" t:value="dap.massachusetts"  class="element checkbox indent2" /><t:label for="massachusetts" class="indent2" />
+		<t:checkbox t:id="vermont" t:value="dap.vermont"  class="element checkbox indent2" /><t:label for="vermont" class="indent2" />
+		<t:checkbox t:id="connecticut" t:value="dap.connecticut"  class="element checkbox indent2" /><t:label for="connecticut" class="indent2" />
+		<t:checkbox t:id="rhodeIsland" t:value="dap.rhodeIsland"  class="element checkbox indent2" /><t:label for="rhodeIsland" class="indent2" />
+		<t:checkbox t:id="midAtlantic" t:value="dap.midAtlantic"  class="element checkbox indent" /><t:label for="midAtlantic" class="indent" />
+		<t:checkbox t:id="newYork" t:value="dap.newYork"  class="element checkbox indent2" /><t:label for="newYork" class="indent2" />
+		<t:checkbox t:id="newJersey" t:value="dap.newJersey"  class="element checkbox indent2" /><t:label for="newJersey" class="indent2" />
+		<t:checkbox t:id="pennsylvania" t:value="dap.pennsylvania"  class="element checkbox indent2" /><t:label for="pennsylvania" class="indent2" />
+		<t:checkbox t:id="marlyland" t:value="dap.marlyland"  class="element checkbox indent2" /><t:label for="marlyland" class="indent2" />
+		<t:checkbox t:id="delaware" t:value="dap.delaware"  class="element checkbox indent2" /><t:label for="delaware" class="indent2" />
+		<t:checkbox t:id="virginia" t:value="dap.virginia"  class="element checkbox indent2" /><t:label for="virginia" class="indent2" />
+		<t:checkbox t:id="districtOfColumbia" t:value="dap.districtOfColumbia"  class="element checkbox indent2" /><t:label for="districtOfColumbia" class="indent2" />
+		<t:checkbox t:id="central" t:value="dap.central"  class="element checkbox indent" /><t:label for="central" class="indent" />
+		<t:checkbox t:id="westVirginia" t:value="dap.westVirginia"  class="element checkbox indent2" /><t:label for="westVirginia" class="indent2" />
+		<t:checkbox t:id="greatLakes" t:value="dap.greatLakes"  class="element checkbox indent" /><t:label for="greatLakes" class="indent" />
+		<t:checkbox t:id="ohio" t:value="dap.ohio"  class="element checkbox indent2" /><t:label for="ohio" class="indent2" />
+		<t:checkbox t:id="southEast" t:value="dap.southEast"  class="element checkbox indent" /><t:label for="southEast" class="indent" />
+		<t:checkbox t:id="northCarolina" t:value="dap.northCarolina"  class="element checkbox indent2" /><t:label for="northCarolina" class="indent2" />
+		<t:checkbox t:id="southCarolina" t:value="dap.southCarolina"  class="element checkbox indent2" /><t:label for="southCarolina" class="indent2" />
+		<t:checkbox t:id="localCity" t:value="dap.localCity"  class="element checkbox" /><t:label for="localCity" class="choice" />
+		<t:checkbox t:id="problemFocused" t:value="dap.problemFocused"  class="element checkbox" /><t:label for="problemFocused" class="choice" />
+
+
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('sectorBox');" title="Show or Hide">Sector</legend>
+       <div id="sectorBox" class="unhidden">
+
+		<t:checkbox t:id="publicHealth" t:value="dap.publicHealth"  class="element checkbox" /><t:label for="publicHealth" class="choice" />
+		<t:checkbox t:id="emergencyManagement" t:value="dap.emergencyManagement"  class="element checkbox indent" /><t:label for="emergencyManagement" class="indent" />
+		<t:checkbox t:id="indirectClimateHazards" t:value="dap.indirectClimateHazards"  class="element checkbox indent" /><t:label for="indirectClimateHazards" class="indent" />
+		<t:checkbox t:id="vectorBorneIllness" t:value="dap.vectorBorneIllness"  class="element checkbox indent" /><t:label for="vectorBorneIllness" class="indent" />
+		<t:checkbox t:id="heatRelated" t:value="dap.heatRelated"  class="element checkbox indent" /><t:label for="heatRelated" class="indent" />
+		<t:checkbox t:id="waterQuality" t:value="dap.waterQuality"  class="element checkbox indent" /><t:label for="waterQuality" class="indent" />
+		<t:checkbox t:id="infrastructure" t:value="dap.infrastructure"  class="element checkbox" /><t:label for="infrastructure" class="choice" />
+		<t:checkbox t:id="energy" t:value="dap.energy"  class="element checkbox indent" /><t:label for="energy" class="indent" />
+		<t:checkbox t:id="communication" t:value="dap.communication"  class="element checkbox indent" /><t:label for="communication" class="indent" />
+		<t:checkbox t:id="freshWaterResources" t:value="dap.freshWaterResources"  class="element checkbox indent" /><t:label for="freshWaterResources" class="indent" />
+		<t:checkbox t:id="stormWater" t:value="dap.stormWater"  class="element checkbox indent2" /><t:label for="stormWater" class="indent2" />
+		<t:checkbox t:id="wastewater" t:value="dap.wastewater"  class="element checkbox indent2" /><t:label for="wastewater" class="indent2" />
+		<t:checkbox t:id="waterSupply" t:value="dap.waterSupply"  class="element checkbox indent2" /><t:label for="waterSupply" class="indent2" />
+		<t:checkbox t:id="transportation" t:value="dap.transportation"  class="element checkbox indent" /><t:label for="transportation" class="indent" />
+		<t:checkbox t:id="builtCoast" t:value="dap.builtCoast"  class="element checkbox indent" /><t:label for="builtCoast" class="indent" />
+		<t:checkbox t:id="managedEcosystems" t:value="dap.managedEcosystems"  class="element checkbox" /><t:label for="managedEcosystems" class="choice" />
+		<t:checkbox t:id="fisheries" t:value="dap.fisheries"  class="element checkbox indent" /><t:label for="fisheries" class="indent" />
+		<t:checkbox t:id="aquaculture" t:value="dap.aquaculture"  class="element checkbox indent" /><t:label for="aquaculture" class="indent" />
+		<t:checkbox t:id="agriculture" t:value="dap.agriculture"  class="element checkbox indent" /><t:label for="agriculture" class="indent" />
+		<t:checkbox t:id="forests" t:value="dap.forests"  class="element checkbox indent" /><t:label for="forests" class="indent" />
+		<t:checkbox t:id="otherManagedEcosystems" t:value="dap.otherManagedEcosystems"  class="element checkbox indent" /><t:label for="otherManagedEcosystems" class="indent" />
+		<t:checkbox t:id="naturalEcosystems" t:value="dap.naturalEcosystems"  class="element checkbox" /><t:label for="naturalEcosystems" class="choice" />
+		<t:checkbox t:id="coasts" t:value="dap.coasts"  class="element checkbox indent" /><t:label for="coasts" class="indent" />
+		<t:checkbox t:id="estuaries" t:value="dap.estuaries"  class="element checkbox indent" /><t:label for="estuaries" class="indent" />
+		<t:checkbox t:id="wetlands" t:value="dap.wetlands"  class="element checkbox indent" /><t:label for="wetlands" class="indent" />
+		<t:checkbox t:id="oceans" t:value="dap.oceans"  class="element checkbox indent" /><t:label for="oceans" class="indent" />
+		<t:checkbox t:id="inland" t:value="dap.inland"  class="element checkbox indent" /><t:label for="inland" class="indent" />
+		<t:checkbox t:id="beaches" t:value="dap.beaches"  class="element checkbox indent" /><t:label for="beaches" class="indent" />
+		<t:checkbox t:id="biota" t:value="dap.biota"  class="element checkbox" /><t:label for="biota" class="choice" />
+		<t:checkbox t:id="marine" t:value="dap.marine"  class="element checkbox indent" /><t:label for="marine" class="indent" />
+		<t:checkbox t:id="terrestrial" t:value="dap.terrestrial"  class="element checkbox indent" /><t:label for="terrestrial" class="indent" />
+		<t:checkbox t:id="endangered" t:value="dap.endangered"  class="element checkbox indent" /><t:label for="endangered" class="indent" />
+		<t:checkbox t:id="candidateSpecies" t:value="dap.candidateSpecies"  class="element checkbox indent" /><t:label for="candidateSpecies" class="indent" />
+		<t:checkbox t:id="concernSpecies" t:value="dap.concernSpecies"  class="element checkbox indent" /><t:label for="concernSpecies" class="indent" />
+		<t:checkbox t:id="cultural" t:value="dap.cultural"  class="element checkbox" /><t:label for="cultural" class="choice" />
+		<t:checkbox t:id="recreationAndTourism" t:value="dap.recreationAndTourism"  class="element checkbox" /><t:label for="recreationAndTourism" class="choice" />
+		<t:checkbox t:id="urban" t:value="dap.urban"  class="element checkbox indent" /><t:label for="urban" class="indent" />
+		<t:checkbox t:id="indigenousPeoples" t:value="dap.indigenousPeoples"  class="element checkbox indent" /><t:label for="indigenousPeoples" class="indent" />
+		<t:checkbox t:id="minority" t:value="dap.minority"  class="element checkbox indent" /><t:label for="minority" class="indent" />
+		<t:checkbox t:id="economicResources" t:value="dap.economicResources"  class="element checkbox" /><t:label for="economicResources" class="choice" />
+		<t:checkbox t:id="crossDisciplinary" t:value="dap.crossDisciplinary"  class="element checkbox" /><t:label for="crossDisciplinary" class="choice" />
+		<t:checkbox t:id="otherSector" t:value="dap.otherSector"  class="element checkbox" /><t:label for="otherSector" class="choice" />
+		
+
+
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+		
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('capabilitiesBox');" title="Show or Hide">Capability Area</legend>
+       <div id="capabilitiesBox" class="unhidden">
+		
+		<t:checkbox t:id="ecv" t:value="dap.ecv"  class="element checkbox" /><t:label for="ecv" class="choice" />
+		<t:checkbox t:id="impacts" t:value="dap.impacts"  class="element checkbox" /><t:label for="impacts" class="choice" />
+		<t:checkbox t:id="vulnerabilityAssessments" t:value="dap.vulnerabilityAssessments"  class="element checkbox indent" /><t:label for="vulnerabilityAssessments" class="indent" />
+		<t:checkbox t:id="riskAssessments" t:value="dap.riskAssessments"  class="element checkbox indent" /><t:label for="riskAssessments" class="indent" />
+		<t:checkbox t:id="needs" t:value="dap.needs"  class="element checkbox indent" /><t:label for="needs" class="indent" />
+		<t:checkbox t:id="scenarioPlanning" t:value="dap.scenarioPlanning"  class="element checkbox indent" /><t:label for="scenarioPlanning" class="indent" />
+		<t:checkbox t:id="experimentalImpacts" t:value="dap.experimentalImpacts"  class="element checkbox indent" /><t:label for="experimentalImpacts" class="indent" />
+		<t:checkbox t:id="monitor" t:value="dap.monitor"  class="element checkbox indent" /><t:label for="monitor" class="indent" />
+		<t:checkbox t:id="downscale" t:value="dap.downscale"  class="element checkbox indent" /><t:label for="downscale" class="indent" />
+		<t:checkbox t:id="conditions" t:value="dap.conditions"  class="element checkbox indent" /><t:label for="conditions" class="indent" />
+		<t:checkbox t:id="forecastImpacts" t:value="dap.forecastImpacts"  class="element checkbox indent" /><t:label for="forecastImpacts" class="indent" />
+		<t:checkbox t:id="economicImpacts" t:value="dap.economicImpacts"  class="element checkbox indent" /><t:label for="economicImpacts" class="indent" />
+		<t:checkbox t:id="publicSecurity" t:value="dap.publicSecurity"  class="element checkbox indent" /><t:label for="publicSecurity" class="indent" />
+		<t:checkbox t:id="mitigation" t:value="dap.mitigation"  class="element checkbox" /><t:label for="mitigation" class="choice" />
+		<t:checkbox t:id="translation" t:value="dap.translation"  class="element checkbox indent" /><t:label for="translation" class="indent" />
+		<t:checkbox t:id="tools" t:value="dap.tools"  class="element checkbox indent" /><t:label for="tools" class="indent" />
+		<t:checkbox t:id="stakeholder" t:value="dap.stakeholder"  class="element checkbox indent" /><t:label for="stakeholder" class="indent" />
+		<t:checkbox t:id="guidance" t:value="dap.guidance"  class="element checkbox indent" /><t:label for="guidance" class="indent" />
+		<t:checkbox t:id="literacy" t:value="dap.literacy"  class="element checkbox" /><t:label for="literacy" class="choice" />
+		<t:checkbox t:id="translate" t:value="dap.translate"  class="element checkbox indent" /><t:label for="translate" class="indent" />
+		<t:checkbox t:id="improve" t:value="dap.improve"  class="element checkbox indent" /><t:label for="improve" class="indent" />
+		
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+		
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('disciplineBox');" title="Show or Hide">Scientific Discipline</legend>
+       <div id="disciplineBox" class="unhidden">
+				
+		<t:checkbox t:id="physical" t:value="dap.physical"  class="element checkbox" /><t:label for="physical" class="choice" />
+		<t:checkbox t:id="atmospheric" t:value="dap.atmospheric"  class="element checkbox indent" /><t:label for="atmospheric" class="indent" />
+		<t:checkbox t:id="surfaceAtmosphere" t:value="dap.surfaceAtmosphere"  class="element checkbox indent2" /><t:label for="surfaceAtmosphere" class="indent2" />
+		<t:checkbox t:id="upperAir" t:value="dap.upperAir"  class="element checkbox indent2" /><t:label for="upperAir" class="indent2" />
+		<t:checkbox t:id="composition" t:value="dap.composition"  class="element checkbox indent2" /><t:label for="composition" class="indent2" />
+		<t:checkbox t:id="coastalAndOceanic" t:value="dap.coastalAndOceanic"  class="element checkbox indent" /><t:label for="coastalAndOceanic" class="indent" />
+		<t:checkbox t:id="surface" t:value="dap.surface"  class="element checkbox indent2" /><t:label for="surface" class="indent2" />
+		<t:checkbox t:id="subSurface" t:value="dap.subSurface"  class="element checkbox indent2" /><t:label for="subSurface" class="indent2" />
+		<t:checkbox t:id="ground" t:value="dap.ground"  class="element checkbox indent" /><t:label for="ground" class="indent" />
+		<t:checkbox t:id="ecologicalAndBiological" t:value="dap.ecologicalAndBiological"  class="element checkbox" /><t:label for="ecologicalAndBiological" class="choice" />
+		<t:checkbox t:id="population" t:value="dap.population"  class="element checkbox indent" /><t:label for="population" class="indent" />
+		<t:checkbox t:id="ecosystem" t:value="dap.ecosystem"  class="element checkbox indent" /><t:label for="ecosystem" class="indent" />
+		<t:checkbox t:id="organism" t:value="dap.organism"  class="element checkbox indent" /><t:label for="organism" class="indent" />
+		<t:checkbox t:id="microbial" t:value="dap.microbial"  class="element checkbox indent" /><t:label for="microbial" class="indent" />
+		<t:checkbox t:id="otherBiologicalOrEcological" t:value="dap.otherBiologicalOrEcological"  class="element checkbox indent" /><t:label for="otherBiologicalOrEcological" class="indent" />
+		<t:checkbox t:id="geological" t:value="dap.geological"  class="element checkbox" /><t:label for="geological" class="choice" />
+		<t:checkbox t:id="paleoClimate" t:value="dap.paleoClimate"  class="element checkbox indent" /><t:label for="paleoClimate" class="indent" />
+		<t:checkbox t:id="pollenCounting" t:value="dap.pollenCounting"  class="element checkbox indent" /><t:label for="pollenCounting" class="indent" />
+		<t:checkbox t:id="porosity" t:value="dap.porosity"  class="element checkbox indent" /><t:label for="porosity" class="indent" />
+		<t:checkbox t:id="otherGeological" t:value="dap.otherGeological"  class="element checkbox indent" /><t:label for="otherGeological" class="indent" />
+		<t:checkbox t:id="chemical" t:value="dap.chemical"  class="element checkbox" /><t:label for="chemical" class="choice" />
+		<t:checkbox t:id="ph" t:value="dap.ph"  class="element checkbox indent" /><t:label for="ph" class="indent" />
+		<t:checkbox t:id="carbonConcentration" t:value="dap.carbonConcentration"  class="element checkbox indent" /><t:label for="carbonConcentration" class="indent" />
+		<t:checkbox t:id="otherChemical" t:value="dap.otherChemical"  class="element checkbox indent" /><t:label for="otherChemical" class="indent" />
+		<t:checkbox t:id="climateSocietyInteractions" t:value="dap.climateSocietyInteractions"  class="element checkbox" /><t:label for="climateSocietyInteractions" class="choice" />
+		<t:checkbox t:id="socialAndEconomic" t:value="dap.socialAndEconomic"  class="element checkbox indent" /><t:label for="socialAndEconomic" class="indent" />
+		<t:checkbox t:id="decisionMaking" t:value="dap.decisionMaking"  class="element checkbox indent" /><t:label for="decisionMaking" class="indent" />
+		<t:checkbox t:id="riskAssessmentOrRiskManagement" t:value="dap.riskAssessmentOrRiskManagement"  class="element checkbox indent" /><t:label for="riskAssessmentOrRiskManagement" class="indent" />
+		<t:checkbox t:id="policyPlanning" t:value="dap.policyPlanning"  class="element checkbox indent" /><t:label for="policyPlanning" class="indent" />
+		<t:checkbox t:id="communicationAndEducation" t:value="dap.communicationAndEducation"  class="element checkbox indent" /><t:label for="communicationAndEducation" class="indent" />
+		<t:checkbox t:id="otherClimateSocietyInteractions" t:value="dap.otherClimateSocietyInteractions"  class="element checkbox indent" /><t:label for="otherClimateSocietyInteractions" class="indent" />
+		
+       </div>
+       
+      </fieldset>
+     </li>
+	
+		
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('dataBox');" title="Show or Hide">Data</legend>
+       <div id="dataBox" class="unhidden">
+						
+		<t:checkbox t:id="insituObservations" t:value="dap.insituObservations"  class="element checkbox" /><t:label for="insituObservations" class="choice" />
+		<t:checkbox t:id="satelliteRemoteObservations" t:value="dap.satelliteRemoteObservations"  class="element checkbox" /><t:label for="satelliteRemoteObservations" class="choice" />
+		<t:checkbox t:id="observingSystems" t:value="dap.observingSystems"  class="element checkbox" /><t:label for="observingSystems" class="choice" />
+		<t:checkbox t:id="surveysAndPreliminaryAssessments" t:value="dap.surveysAndPreliminaryAssessments"  class="element checkbox" /><t:label for="surveysAndPreliminaryAssessments" class="choice" />
+		<t:checkbox t:id="indicatorBasedResearch" t:value="dap.indicatorBasedResearch"  class="element checkbox" /><t:label for="indicatorBasedResearch" class="choice" />
+		<t:checkbox t:id="reanalysisProducts" t:value="dap.reanalysisProducts"  class="element checkbox" /><t:label for="reanalysisProducts" class="choice" />
+		<t:checkbox t:id="depthAndElevationData" t:value="dap.depthAndElevationData"  class="element checkbox" /><t:label for="depthAndElevationData" class="choice" />
+		<t:checkbox t:id="dataStewardshipAndProvisions" t:value="dap.dataStewardshipAndProvisions"  class="element checkbox" /><t:label for="dataStewardshipAndProvisions" class="choice" />
+		<t:checkbox t:id="otherData" t:value="dap.otherData"  class="element checkbox" /><t:label for="otherData" class="choice" />
+		
+       </div>
+       
+      </fieldset>
+     </li>
+	
+	
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('productsBox');" title="Show or Hide">Products</legend>
+       <div id="productsBox" class="unhidden">
+       
+		<t:checkbox t:id="hindcasts" t:value="dap.hindcasts"  class="element checkbox" /><t:label for="hindcasts" class="choice" />
+		<t:checkbox t:id="forecastsAndOutlooks" t:value="dap.forecastsAndOutlooks"  class="element checkbox" /><t:label for="forecastsAndOutlooks" class="choice" />
+		<t:checkbox t:id="projections" t:value="dap.projections"  class="element checkbox" /><t:label for="projections" class="choice" />
+		<t:checkbox t:id="maps" t:value="dap.maps"  class="element checkbox" /><t:label for="maps" class="choice" />
+		<t:checkbox t:id="assessments" t:value="dap.assessments"  class="element checkbox" /><t:label for="assessments" class="choice" />
+		<t:checkbox t:id="adaptationPlan" t:value="dap.adaptationPlan"  class="element checkbox indent" /><t:label for="adaptationPlan" class="indent" />
+		<t:checkbox t:id="needsAssessment" t:value="dap.needsAssessment"  class="element checkbox indent" /><t:label for="needsAssessment" class="indent" />
+		<t:checkbox t:id="productCapacity" t:value="dap.productCapacity"  class="element checkbox indent2" /><t:label for="productCapacity" class="indent2" />
+		<t:checkbox t:id="productCapabilities" t:value="dap.productCapabilities"  class="element checkbox indent2" /><t:label for="productCapabilities" class="indent2" />
+		<t:checkbox t:id="actionPlan" t:value="dap.actionPlan"  class="element checkbox indent" /><t:label for="actionPlan" class="indent" />
+		<t:checkbox t:id="needsActions" t:value="dap.needsActions"  class="element checkbox indent2" /><t:label for="needsActions" class="indent2" />
+		<t:checkbox t:id="capacity" t:value="dap.capacity"  class="element checkbox indent2" /><t:label for="capacity" class="indent2" />
+		<t:checkbox t:id="capabilities" t:value="dap.capabilities"  class="element checkbox indent2" /><t:label for="capabilities" class="indent2" />
+		<t:checkbox t:id="impactStudy" t:value="dap.impactStudy"  class="element checkbox indent" /><t:label for="impactStudy" class="indent" />
+		<t:checkbox t:id="riskAndVulnerability" t:value="dap.riskAndVulnerability"  class="element checkbox indent" /><t:label for="riskAndVulnerability" class="indent" />
+		<t:checkbox t:id="problemFocusedProduct" t:value="dap.problemFocusedProduct"  class="element checkbox indent" /><t:label for="problemFocusedProduct" class="indent" />
+		<t:checkbox t:id="climateScience" t:value="dap.climateScience"  class="element checkbox indent2" /><t:label for="climateScience" class="indent2" />
+		<t:checkbox t:id="otherProducts" t:value="dap.otherProducts"  class="element checkbox" /><t:label for="otherProducts" class="choice" />
+
+       </div>
+       
+      </fieldset>
+     </li>
+	
+	
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('servicesBox');" title="Show or Hide">Services</legend>
+       <div id="servicesBox" class="unhidden">
+	
+		<t:checkbox t:id="engagement" t:value="dap.engagement"  class="element checkbox" /><t:label for="engagement" class="choice" />
+		<t:checkbox t:id="stakeholderEngagement" t:value="dap.stakeholderEngagement"  class="element checkbox indent" /><t:label for="stakeholderEngagement" class="indent" />
+		<t:checkbox t:id="sectorSpecific" t:value="dap.sectorSpecific"  class="element checkbox indent2" /><t:label for="sectorSpecific" class="indent2" />
+		<t:checkbox t:id="regionSpecific" t:value="dap.regionSpecific"  class="element checkbox indent2" /><t:label for="regionSpecific" class="indent2" />
+		<t:checkbox t:id="publicEngagement" t:value="dap.publicEngagement"  class="element checkbox indent" /><t:label for="publicEngagement" class="indent" />
+		<t:checkbox t:id="education" t:value="dap.education"  class="element checkbox" /><t:label for="education" class="choice" />
+		<t:checkbox t:id="k12Education" t:value="dap.k12Education"  class="element checkbox indent" /><t:label for="k12Education" class="indent" />
+		<t:checkbox t:id="publicEducation" t:value="dap.publicEducation"  class="element checkbox indent" /><t:label for="publicEducation" class="indent" />
+		<t:checkbox t:id="trainingAndCapacityBuilding" t:value="dap.trainingAndCapacityBuilding"  class="element checkbox" /><t:label for="trainingAndCapacityBuilding" class="choice" />
+		<t:checkbox t:id="dataSupportTools" t:value="dap.dataSupportTools"  class="element checkbox indent" /><t:label for="dataSupportTools" class="indent" />
+		<t:checkbox t:id="adaptationAndMitigationGuidance" t:value="dap.adaptationAndMitigationGuidance"  class="element checkbox indent" /><t:label for="adaptationAndMitigationGuidance" class="indent" />
+		<t:checkbox t:id="viewersAndWebBasedTools" t:value="dap.viewersAndWebBasedTools"  class="element checkbox" /><t:label for="viewersAndWebBasedTools" class="choice" />
+		<t:checkbox t:id="monitoringTools" t:value="dap.monitoringTools"  class="element checkbox indent" /><t:label for="monitoringTools" class="indent" />
+		<t:checkbox t:id="visualizationTools" t:value="dap.visualizationTools"  class="element checkbox indent" /><t:label for="visualizationTools" class="indent" />
+		<t:checkbox t:id="prioritizationTools" t:value="dap.prioritizationTools"  class="element checkbox indent" /><t:label for="prioritizationTools" class="indent" />
+		<t:checkbox t:id="managementGuidance" t:value="dap.managementGuidance"  class="element checkbox" /><t:label for="managementGuidance" class="choice" />
+		<t:checkbox t:id="policyGuidance" t:value="dap.policyGuidance"  class="element checkbox" /><t:label for="policyGuidance" class="choice" />
+		<t:checkbox t:id="otherServices" t:value="dap.otherServices"  class="element checkbox" /><t:label for="otherServices" class="choice" />
+
+
+       </div>
+       
+      </fieldset>
+     </li>
+	
+
+
+     <li class="buttons">
+       <t:submit class="button_text" value="Add/Update" />
+       <t:submit t:id="search" value="Search" />
+       (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+       (<t:pagelink page="daps">CANCEL - go to list</t:pagelink>)
+       
+     </li>
+
+   </ul>
+  </t:form>	
+    
+ </body>
+</html>

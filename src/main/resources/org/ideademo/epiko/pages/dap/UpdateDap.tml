@@ -1,0 +1,320 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="dap" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+			  <t:label for="description" class="blocklbl" />
+              <t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="50" value="dap.description" />
+			
+			  <t:label for="url" class="blocklbl" />
+              <t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="50" value="dap.url" />
+
+			  <t:label for="worksheet" class="blocklbl" />
+              <t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="50" value="dap.worksheet" />
+             
+
+			  <t:label for="objectives" class="blocklbl" />
+              <t:textArea t:id="objectives" t:validate="maxlength=255" rows="1" cols="50" value="dap.objectives" />
+			
+			  <t:label for="dates" class="blocklbl" />
+              <t:textArea t:id="dates" t:validate="maxlength=255" rows="1" cols="50" value="dap.dates" />
+
+			  <t:label for="resources" class="blocklbl" />
+              <t:textArea t:id="resources" t:validate="maxlength=255" rows="1" cols="50" value="dap.resources" />
+
+			  <t:label for="feedback" class="blocklbl" />
+              <t:textArea t:id="feedback" t:validate="maxlength=255" rows="1" cols="50" value="dap.feedback" />
+
+			  <t:label for="keywords" class="blocklbl" />
+              <t:textArea t:id="keywords" t:validate="maxlength=4096" rows="4" cols="50" value="dap.keywords" />
+              
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                  (<t:pagelink page="daps">CANCEL - go to list</t:pagelink>)
+              
+
+
+			</div>
+			<div class="col2">
+
+              <t:label for="code" class="blocklbl" />
+              <t:textArea t:id="code" t:validate="maxlength=255" rows="1" size="15" value="dap.code" />
+
+              <t:label for="name" class="blocklbl" />
+              <t:textArea  t:id="name" t:validate="maxlength=255" rows="1" cols="50" value="dap.name" />
+
+              <t:label for="organization" class="blocklbl" />
+              <t:textArea t:id="organization" t:validate="maxlength=255" rows="1" cols="50" value="dap.organization" />
+
+               <t:label for="contact" class="blocklbl" />
+               <t:textArea t:id="contact" t:validate="maxlength=255" rows="1" cols="50" value="dap.contact" />
+              
+              <fieldset>
+               <legend>Status</legend>
+                <t:checkbox t:id="ongoing" t:value="dap.ongoing" /><t:label for="ongoing" class="padr"/>
+                <t:checkbox t:id="planned" t:value="dap.planned" /><t:label for="planned" class="padr"/>
+                <t:checkbox t:id="proposed" t:value="dap.proposed" /><t:label for="proposed" class="padr"/>
+                <t:checkbox t:id="completed" t:value="dap.completed" /><t:label for="completed" />
+               </fieldset>
+
+              <fieldset>
+               <legend>Priority</legend>
+                <t:checkbox t:id="high" t:value="dap.high" /><t:label for="high" class="padr"/>
+                <t:checkbox t:id="mid" t:value="dap.mid" /><t:label for="mid" class="padr"/>
+                <t:checkbox t:id="low" t:value="dap.low" /><t:label for="low" class="padr"/>
+                <t:checkbox t:id="unknown" t:value="dap.unknown" /><t:label for="unknown" />
+               </fieldset>
+              
+
+               <fieldset>
+                <legend>Focus Area</legend>
+                 <t:checkbox t:id="sustainability" t:value="dap.sustainability" /><t:label for="sustainability" /><br />
+                 <t:checkbox t:id="resilience" t:value="dap.resilience" /><t:label for="resilience" /><br />
+                 <t:checkbox t:id="water" t:value="dap.water" /><t:label for="water" /><br />
+                 <t:checkbox t:id="extremes" t:value="dap.extremes" /><t:label for="extremes" /><br />
+                 <t:checkbox t:id="conservation" t:value="dap.conservation" /><t:label for="conservation" /><br />
+               </fieldset>
+               
+
+               <fieldset>
+                <legend>Area of Applicability</legend>
+                
+                 <t:checkbox t:id="international" t:value="dap.international" /><t:label for="international" /><br />
+                   <t:checkbox t:id="canada" t:value="dap.canada" class="indent" /><t:label for="canada" class="padr" />
+                   <t:checkbox t:id="newBrunswick" t:value="dap.newBrunswick" /><t:label for="newBrunswick" class="padr" />
+                   <t:checkbox t:id="novaScotia" t:value="dap.novaScotia" /><t:label for="novaScotia" class="padr" />
+                   <t:checkbox t:id="quebec" t:value="dap.quebec" /><t:label for="quebec" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <t:checkbox t:id="princeEdwardIsland" t:value="dap.princeEdwardIsland" class="indent" /><t:label for="princeEdwardIsland" class="padr" />
+                   <t:checkbox t:id="newfoundland" t:value="dap.newfoundland" /><t:label for="newfoundland" class="padr" />
+                   <t:checkbox t:id="labrador" t:value="dap.labrador" /><t:label for="labrador" /><br />
+          
+                 <t:checkbox t:id="national" t:value="dap.national" /><t:label for="national" class="padr"/>
+                 <t:checkbox t:id="regionalOrState" t:value="dap.regionalOrState" /><t:label for="regionalOrState" /><br />
+                   <t:checkbox t:id="newEngland" t:value="dap.newEngland" class="indent" /><t:label for="newEngland" class="padr" />
+                   <t:checkbox t:id="maine" t:value="dap.maine" /><t:label for="maine" class="padr" />
+                   <t:checkbox t:id="newHampshire" t:value="dap.newHampshire" /><t:label for="newHampshire" class="padr" />
+                   <t:checkbox t:id="massachusetts" t:value="dap.massachusetts" /><t:label for="massachusetts" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <t:checkbox t:id="vermont" t:value="dap.vermont" class="indent" /><t:label for="vermont" class="padr" />
+                   <t:checkbox t:id="connecticut" t:value="dap.connecticut" /><t:label for="connecticut" class="padr" />
+                   <t:checkbox t:id="rhodeIsland" t:value="dap.rhodeIsland" /><t:label for="rhodeIsland" /><br />
+                   <t:checkbox t:id="midAtlantic" t:value="dap.midAtlantic" class="indent" /><t:label for="midAtlantic" class="padr" />
+                   <t:checkbox t:id="newYork" t:value="dap.newYork" /><t:label for="newYork" class="padr" />
+                   <t:checkbox t:id="newJersey" t:value="dap.newJersey" /><t:label for="newJersey" class="padr" />
+                   <t:checkbox t:id="pennsylvania" t:value="dap.pennsylvania" /><t:label for="pennsylvania" class="padr" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <t:checkbox t:id="marlyland" t:value="dap.marlyland" class="indent" /><t:label for="marlyland" class="padr" />
+                   <t:checkbox t:id="virginia" t:value="dap.virginia" /><t:label for="virginia" class="padr" />
+                   <t:checkbox t:id="districtOfColumbia" t:value="dap.districtOfColumbia" /><t:label for="districtOfColumbia" class="padr" />
+                   <t:checkbox t:id="delaware" t:value="dap.delaware" /><t:label for="delaware" /><br />
+                   <t:checkbox t:id="central" t:value="dap.central" class="indent" /><t:label for="central" class="padr" />
+                   <t:checkbox t:id="westVirginia" t:value="dap.westVirginia" /><t:label for="westVirginia" /><br />
+                   <t:checkbox t:id="greatLakes" t:value="dap.greatLakes" class="indent" /><t:label for="greatLakes" class="padr" />
+                   <t:checkbox t:id="ohio" t:value="dap.ohio" /><t:label for="ohio" /><br />
+                   <t:checkbox t:id="southEast" t:value="dap.southEast" class="indent" /><t:label for="southEast" class="padr" />
+                   <t:checkbox t:id="northCarolina" t:value="dap.northCarolina" /><t:label for="northCarolina" class="padr" />
+                   <t:checkbox t:id="southCarolina" t:value="dap.southCarolina" /><t:label for="southCarolina" /><br />
+                   
+                 <t:checkbox t:id="localCity" t:value="dap.localCity" /><t:label for="localCity" /><br />
+                 <t:checkbox t:id="problemFocused" t:value="dap.problemFocused" /><t:label for="problemFocused" /><br />
+
+
+               </fieldset>
+               
+               <fieldset>
+                 <legend>Scientific Discipline</legend>
+                 
+				<t:checkbox t:id="physical" t:value="dap.physical" /><t:label for="physical" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="atmospheric" t:value="dap.atmospheric" /><t:label for="atmospheric" class="padr" />
+				<t:checkbox t:id="surfaceAtmosphere" t:value="dap.surfaceAtmosphere" /><t:label for="surfaceAtmosphere" class="padr" />
+				<t:checkbox t:id="upperAir" t:value="dap.upperAir" /><t:label for="upperAir" class="padr" />
+				<t:checkbox t:id="composition" t:value="dap.composition" /><t:label for="composition" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="coastalAndOceanic" t:value="dap.coastalAndOceanic" /><t:label for="coastalAndOceanic" class="padr" />
+				<t:checkbox t:id="surface" t:value="dap.surface" /><t:label for="surface" class="padr" />
+				<t:checkbox t:id="subSurface" t:value="dap.subSurface" /><t:label for="subSurface" class="padr" />
+				<t:checkbox t:id="ground" t:value="dap.ground" /><t:label for="ground" class="padr" /><br />
+				<t:checkbox t:id="ecologicalAndBiological" t:value="dap.ecologicalAndBiological" /><t:label for="ecologicalAndBiological" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="population" t:value="dap.population" /><t:label for="population" class="padr" />
+				<t:checkbox t:id="ecosystem" t:value="dap.ecosystem" /><t:label for="ecosystem" class="padr" />
+				<t:checkbox t:id="organism" t:value="dap.organism" /><t:label for="organism" class="padr" />
+				<t:checkbox t:id="microbial" t:value="dap.microbial" /><t:label for="microbial" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="otherBiologicalOrEcological" t:value="dap.otherBiologicalOrEcological" /><t:label for="otherBiologicalOrEcological" /><br />
+				<t:checkbox t:id="geological" t:value="dap.geological" /><t:label for="geological" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="paleoClimate" t:value="dap.paleoClimate" /><t:label for="paleoClimate" class="padr" />
+				<t:checkbox t:id="pollenCounting" t:value="dap.pollenCounting"  /><t:label for="pollenCounting" class="padr" />
+				<t:checkbox t:id="porosity" t:value="dap.porosity" /><t:label for="porosity" class="padr" />
+				<t:checkbox t:id="otherGeological" t:value="dap.otherGeological" /><t:label for="otherGeological" class="padr" /><br />
+				<t:checkbox t:id="chemical" t:value="dap.chemical" /><t:label for="chemical" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="ph" t:value="dap.ph" /><t:label for="ph" class="padr" />
+				<t:checkbox t:id="carbonConcentration" t:value="dap.carbonConcentration" /><t:label for="carbonConcentration" class="padr" />
+				<t:checkbox t:id="otherChemical" t:value="dap.otherChemical" /><t:label for="otherChemical" class="padr" /><br />
+				<t:checkbox t:id="climateSocietyInteractions" t:value="dap.climateSocietyInteractions" /><t:label for="climateSocietyInteractions" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="socialAndEconomic" t:value="dap.socialAndEconomic" /><t:label for="socialAndEconomic" class="padr" />
+				<t:checkbox t:id="decisionMaking" t:value="dap.decisionMaking" /><t:label for="decisionMaking" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="riskAssessmentOrRiskManagement" t:value="dap.riskAssessmentOrRiskManagement" /><t:label for="riskAssessmentOrRiskManagement" class="padr" />
+				<t:checkbox t:id="policyPlanning" t:value="dap.policyPlanning" /><t:label for="policyPlanning" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="communicationAndEducation" t:value="dap.communicationAndEducation" /><t:label for="communicationAndEducation" class="padr" />
+				<t:checkbox t:id="otherClimateSocietyInteractions" t:value="dap.otherClimateSocietyInteractions" /><t:label for="otherClimateSocietyInteractions" class="padr" />
+                 
+                 
+               </fieldset>
+
+
+			</div>
+			<div class="col3">
+
+       
+               <fieldset>
+                <legend>Capability Area</legend>
+                 <t:checkbox t:id="ecv" t:value="dap.ecv" /><t:label for="ecv" /><br />
+                 <t:checkbox t:id="impacts" t:value="dap.impacts" /><t:label for="impacts" class="padr" />
+                 <t:checkbox t:id="vulnerabilityAssessments" t:value="dap.vulnerabilityAssessments" /><t:label for="vulnerabilityAssessments" /><br />
+                 <t:checkbox t:id="riskAssessments" t:value="dap.riskAssessments" /><t:label for="riskAssessments" class="padr" />
+                 <t:checkbox t:id="needs" t:value="dap.needs" /><t:label for="needs" /><br />
+                 <t:checkbox t:id="scenarioPlanning" t:value="dap.scenarioPlanning" /><t:label for="scenarioPlanning" class="padr" />
+                 <t:checkbox t:id="experimentalImpacts" t:value="dap.experimentalImpacts" /><t:label for="experimentalImpacts" class="padr" />
+                 <t:checkbox t:id="monitor" t:value="dap.monitor" /><t:label for="monitor" /><br />
+                 <t:checkbox t:id="downscale" t:value="dap.downscale" /><t:label for="downscale" class="padr" />
+                 <t:checkbox t:id="conditions" t:value="dap.conditions" /><t:label for="conditions" /><br />
+                 <t:checkbox t:id="forecastImpacts" t:value="dap.forecastImpacts" /><t:label for="forecastImpacts" class="padr" />
+                 <t:checkbox t:id="economicImpacts" t:value="dap.economicImpacts" /><t:label for="economicImpacts" /><br />
+                 <t:checkbox t:id="publicSecurity" t:value="dap.publicSecurity" /><t:label for="publicSecurity" /><br />
+                 <t:checkbox t:id="mitigation" t:value="dap.mitigation" /><t:label for="mitigation" /><br />
+                 <t:checkbox t:id="translation" t:value="dap.translation" /><t:label for="translation" /><br />
+                 <t:checkbox t:id="tools" t:value="dap.tools" /><t:label for="tools" /><br />
+                 <t:checkbox t:id="stakeholder" t:value="dap.stakeholder" /><t:label for="stakeholder" /><br />
+                 <t:checkbox t:id="guidance" t:value="dap.guidance" /><t:label for="guidance" class="padr" />
+                 <t:checkbox t:id="literacy" t:value="dap.literacy" /><t:label for="literacy" /><br />
+                 <t:checkbox t:id="translate" t:value="dap.translate" /><t:label for="translate" /><br />
+                 <t:checkbox t:id="improve" t:value="dap.improve" /><t:label for="improve" /><br />
+			
+               </fieldset>			
+               
+               <fieldset>
+                <legend>Sector</legend>
+                
+                <t:checkbox t:id="publicHealth" t:value="dap.publicHealth" /><t:label for="publicHealth" class="padr" />
+				<t:checkbox t:id="emergencyManagement" t:value="dap.emergencyManagement" /><t:label for="emergencyManagement" /><br />
+				<t:checkbox t:id="indirectClimateHazards" t:value="dap.indirectClimateHazards" /><t:label for="indirectClimateHazards" class="padr" />
+				<t:checkbox t:id="vectorBorneIllness" t:value="dap.vectorBorneIllness" /><t:label for="vectorBorneIllness" /><br />
+				<t:checkbox t:id="heatRelated" t:value="dap.heatRelated" /><t:label for="heatRelated" class="padr" />
+				<t:checkbox t:id="waterQuality" t:value="dap.waterQuality" /><t:label for="waterQuality" class="padr" />
+				<t:checkbox t:id="infrastructure" t:value="dap.infrastructure" /><t:label for="infrastructure" class="padr" />
+				<t:checkbox t:id="energy" t:value="dap.energy" /><t:label for="energy" /><br />
+				<t:checkbox t:id="communication" t:value="dap.communication" /><t:label for="communication" class="padr" />
+				<t:checkbox t:id="freshWaterResources" t:value="dap.freshWaterResources" /><t:label for="freshWaterResources" /><br />
+				<t:checkbox t:id="stormWater" t:value="dap.stormWater" /><t:label for="stormWater" class="padr" />
+				<t:checkbox t:id="wastewater" t:value="dap.wastewater" /><t:label for="wastewater" class="padr" />
+				<t:checkbox t:id="waterSupply" t:value="dap.waterSupply" /><t:label for="waterSupply" class="padr" />
+				<t:checkbox t:id="transportation" t:value="dap.transportation" /><t:label for="transportation" /><br />
+				<t:checkbox t:id="builtCoast" t:value="dap.builtCoast" /><t:label for="builtCoast" class="padr" />
+				<t:checkbox t:id="managedEcosystems" t:value="dap.managedEcosystems" /><t:label for="managedEcosystems" class="padr" />
+				<t:checkbox t:id="fisheries" t:value="dap.fisheries" /><t:label for="fisheries" class="padr" />
+				<t:checkbox t:id="aquaculture" t:value="dap.aquaculture" /><t:label for="aquaculture" /><br />
+				<t:checkbox t:id="agriculture" t:value="dap.agriculture" /><t:label for="agriculture" class="padr" />
+				<t:checkbox t:id="forests" t:value="dap.forests" /><t:label for="forests" class="padr" />
+				<t:checkbox t:id="otherManagedEcosystems" t:value="dap.otherManagedEcosystems" /><t:label for="otherManagedEcosystems" /><br />
+				<t:checkbox t:id="naturalEcosystems" t:value="dap.naturalEcosystems" /><t:label for="naturalEcosystems" class="padr" />
+				<t:checkbox t:id="coasts" t:value="dap.coasts" /><t:label for="coasts" class="padr" />
+				<t:checkbox t:id="estuaries" t:value="dap.estuaries" /><t:label for="estuaries" class="padr" />
+				<t:checkbox t:id="wetlands" t:value="dap.wetlands" /><t:label for="wetlands" class="padr" />
+				<t:checkbox t:id="oceans" t:value="dap.oceans" /><t:label for="oceans" /><br />
+				<t:checkbox t:id="inland" t:value="dap.inland" /><t:label for="inland" class="padr" />
+				<t:checkbox t:id="beaches" t:value="dap.beaches" /><t:label for="beaches" class="padr" />
+				<t:checkbox t:id="biota" t:value="dap.biota" /><t:label for="biota" class="padr" />
+				<t:checkbox t:id="marine" t:value="dap.marine" /><t:label for="marine" /><br />
+				<t:checkbox t:id="terrestrial" t:value="dap.terrestrial" /><t:label for="terrestrial" class="padr" />
+				<t:checkbox t:id="endangered" t:value="dap.endangered" /><t:label for="endangered" /><br />
+				<t:checkbox t:id="candidateSpecies" t:value="dap.candidateSpecies" /><t:label for="candidateSpecies" class="padr"/>
+				<t:checkbox t:id="concernSpecies" t:value="dap.concernSpecies" /><t:label for="concernSpecies"  /><br />
+				<t:checkbox t:id="cultural" t:value="dap.cultural" /><t:label for="cultural" class="padr" />
+				<t:checkbox t:id="recreationAndTourism" t:value="dap.recreationAndTourism" /><t:label for="recreationAndTourism" /><br />
+				<t:checkbox t:id="urban" t:value="dap.urban" /><t:label for="urban" class="padr" />
+				<t:checkbox t:id="indigenousPeoples" t:value="dap.indigenousPeoples" /><t:label for="indigenousPeoples" /><br />
+				<t:checkbox t:id="minority" t:value="dap.minority" /><t:label for="minority" class="padr" />
+				<t:checkbox t:id="economicResources" t:value="dap.economicResources" /><t:label for="economicResources" /><br />
+				<t:checkbox t:id="crossDisciplinary" t:value="dap.crossDisciplinary" /><t:label for="crossDisciplinary" class="padr" />
+				<t:checkbox t:id="otherSector" t:value="dap.otherSector" /><t:label for="otherSector" />
+                
+               
+               </fieldset>
+               
+               <fieldset>
+                <legend>Data</legend>
+                
+				<t:checkbox t:id="insituObservations" t:value="dap.insituObservations" /><t:label for="insituObservations" class="padr" />
+				<t:checkbox t:id="satelliteRemoteObservations" t:value="dap.satelliteRemoteObservations" /><t:label for="satelliteRemoteObservations" /><br />
+				<t:checkbox t:id="observingSystems" t:value="dap.observingSystems" /><t:label for="observingSystems" class="padr" />
+				<t:checkbox t:id="surveysAndPreliminaryAssessments" t:value="dap.surveysAndPreliminaryAssessments" /><t:label for="surveysAndPreliminaryAssessments" /><br />
+				<t:checkbox t:id="indicatorBasedResearch" t:value="dap.indicatorBasedResearch" /><t:label for="indicatorBasedResearch" class="padr" />
+				<t:checkbox t:id="reanalysisProducts" t:value="dap.reanalysisProducts" /><t:label for="reanalysisProducts" /><br />
+				<t:checkbox t:id="depthAndElevationData" t:value="dap.depthAndElevationData" /><t:label for="depthAndElevationData" class="padr" />
+				<t:checkbox t:id="dataStewardshipAndProvisions" t:value="dap.dataStewardshipAndProvisions" /><t:label for="dataStewardshipAndProvisions" /><br />
+				<t:checkbox t:id="otherData" t:value="dap.otherData" /><t:label for="otherData" class="padr" />
+                
+               </fieldset>
+                
+               <fieldset>
+                <legend>Products</legend>
+                
+				<t:checkbox t:id="hindcasts" t:value="dap.hindcasts" /><t:label for="hindcasts" class="padr" />
+				<t:checkbox t:id="forecastsAndOutlooks" t:value="dap.forecastsAndOutlooks" /><t:label for="forecastsAndOutlooks" class="padr" />
+				<t:checkbox t:id="projections" t:value="dap.projections" /><t:label for="projections" class="padr" />
+				<t:checkbox t:id="maps" t:value="dap.maps" /><t:label for="maps" class="padr" /><br />
+				<t:checkbox t:id="assessments" t:value="dap.assessments" /><t:label for="assessments" class="padr" />
+				<t:checkbox t:id="adaptationPlan" t:value="dap.adaptationPlan" /><t:label for="adaptationPlan" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="needsAssessment" t:value="dap.needsAssessment" /><t:label for="needsAssessment" class="padr" /> 
+				<t:checkbox t:id="productCapacity" t:value="dap.productCapacity" /><t:label for="productCapacity" class="padr" />
+				<t:checkbox t:id="productCapabilities" t:value="dap.productCapabilities" /><t:label for="productCapabilities" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="actionPlan" t:value="dap.actionPlan" /><t:label for="actionPlan" class="padr" />
+				<t:checkbox t:id="needsActions" t:value="dap.needsActions" /><t:label for="needsActions" class="padr" />
+				<t:checkbox t:id="capacity" t:value="dap.capacity" /><t:label for="capacity" class="padr" />
+				<t:checkbox t:id="capabilities" t:value="dap.capabilities" /><t:label for="capabilities" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="impactStudy" t:value="dap.impactStudy" /><t:label for="impactStudy" class="padr" />
+				<t:checkbox t:id="riskAndVulnerability" t:value="dap.riskAndVulnerability" /><t:label for="riskAndVulnerability" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="problemFocusedProduct" t:value="dap.problemFocusedProduct" /><t:label for="problemFocusedProduct" class="padr" />
+				<t:checkbox t:id="climateScience" t:value="dap.climateScience" /><t:label for="climateScience" class="padr" /><br />
+				<t:checkbox t:id="otherProducts" t:value="dap.otherProducts" /><t:label for="otherProducts" class="padr" />
+
+
+               </fieldset>
+
+               <fieldset>
+                <legend>Services</legend>
+                
+				<t:checkbox t:id="engagement" t:value="dap.engagement" /><t:label for="engagement" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="stakeholderEngagement" t:value="dap.stakeholderEngagement" /><t:label for="stakeholderEngagement" class="padr" />
+				<t:checkbox t:id="sectorSpecific" t:value="dap.sectorSpecific" /><t:label for="sectorSpecific" class="padr" />
+				<t:checkbox t:id="regionSpecific" t:value="dap.regionSpecific" /><t:label for="regionSpecific" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="publicEngagement" t:value="dap.publicEngagement" /><t:label for="publicEngagement" class="padr" /><br />
+				<t:checkbox t:id="education" t:value="dap.education" /><t:label for="education" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="k12Education" t:value="dap.k12Education" /><t:label for="k12Education" class="padr" />
+				<t:checkbox t:id="publicEducation" t:value="dap.publicEducation" /><t:label for="publicEducation" class="padr" /><br />
+				<t:checkbox t:id="trainingAndCapacityBuilding" t:value="dap.trainingAndCapacityBuilding" /><t:label for="trainingAndCapacityBuilding" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="dataSupportTools" t:value="dap.dataSupportTools" /><t:label for="dataSupportTools" class="padr" />
+				<t:checkbox t:id="adaptationAndMitigationGuidance" t:value="dap.adaptationAndMitigationGuidance" /><t:label for="adaptationAndMitigationGuidance" class="padr" /><br />
+				<t:checkbox t:id="viewersAndWebBasedTools" t:value="dap.viewersAndWebBasedTools" /><t:label for="viewersAndWebBasedTools" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="monitoringTools" t:value="dap.monitoringTools" /><t:label for="monitoringTools" class="padr" />
+				<t:checkbox t:id="visualizationTools" t:value="dap.visualizationTools" /><t:label for="visualizationTools" class="padr" />
+				<t:checkbox t:id="prioritizationTools" t:value="dap.prioritizationTools" /><t:label for="prioritizationTools" class="padr" /><br />
+				<t:checkbox t:id="managementGuidance" t:value="dap.managementGuidance" /><t:label for="managementGuidance" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="policyGuidance" t:value="dap.policyGuidance" /><t:label for="policyGuidance" class="padr" /><br />
+				<t:checkbox t:id="otherServices" t:value="dap.otherServices" /><t:label for="otherServices" class="padr" />
+                
+               </fieldset>
+               
+			</div>
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>
