@@ -1,0 +1,149 @@
+ALTER TABLE org
+  ADD COLUMN  international BOOLEAN,
+  ADD COLUMN  canada BOOLEAN,
+  ADD COLUMN  newBrunswick  BOOLEAN,
+  ADD COLUMN  novaScotia  BOOLEAN,
+  ADD COLUMN  quebec BOOLEAN,
+  ADD COLUMN  princeEdwardIsland  BOOLEAN,
+  ADD COLUMN  newfoundland  BOOLEAN,
+  ADD COLUMN  labrador  BOOLEAN,
+  ADD COLUMN  national  BOOLEAN,
+  ADD COLUMN  regionalOrState  BOOLEAN,
+  ADD COLUMN  newEngland BOOLEAN,
+  ADD COLUMN  maine  BOOLEAN,
+  ADD COLUMN  newHampshire  BOOLEAN,
+  ADD COLUMN  massachusetts  BOOLEAN,
+  ADD COLUMN  vermont  BOOLEAN,
+  ADD COLUMN  connecticut  BOOLEAN,
+  ADD COLUMN  rhodeIsland  BOOLEAN,
+  ADD COLUMN  midAtlantic  BOOLEAN,
+  ADD COLUMN  newYork  BOOLEAN,
+  ADD COLUMN  newJersey  BOOLEAN,
+  ADD COLUMN  pennsylvania  BOOLEAN,
+  ADD COLUMN  marlyland  BOOLEAN,
+  ADD COLUMN  delaware  BOOLEAN,
+  ADD COLUMN  virginia  BOOLEAN,
+  ADD COLUMN  central  BOOLEAN,
+  ADD COLUMN  districtOfColumbia BOOLEAN, 
+  ADD COLUMN  westVirginia  BOOLEAN,
+  ADD COLUMN  greatLakes  BOOLEAN,
+  ADD COLUMN  ohio  BOOLEAN,
+  ADD COLUMN  southEast  BOOLEAN,
+  ADD COLUMN  northCarolina  BOOLEAN,
+  ADD COLUMN  southCarolina  BOOLEAN, 
+  ADD COLUMN  localCity  BOOLEAN,
+  ADD COLUMN  problemFocused BOOLEAN;
+UPDATE org SET
+ international = false,
+ canada = false,
+ newBrunswick  = false,
+ novaScotia  = false,
+ quebec = false,
+ princeEdwardIsland  = false,
+ newfoundland  = false,
+ labrador  = false,
+ national  = false,
+ regionalOrState  = false,
+ newEngland = false,
+ maine  = false,
+ newHampshire  = false,
+ massachusetts  = false,
+ vermont  = false,
+ connecticut  = false,
+ rhodeIsland  = false,
+ midAtlantic  = false,
+ newYork  = false,
+ newJersey  = false,
+ pennsylvania  = false,
+ marlyland  = false,
+ delaware  = false,
+ virginia  = false,
+ central  = false,
+ districtOfColumbia = false, 
+ westVirginia  = false,
+ greatLakes  = false,
+ ohio  = false,
+ southEast  = false,
+ northCarolina  = false,
+ southCarolina  = false, 
+ localCity  = false,
+ problemFocused = false;
+ALTER TABLE org
+  ALTER COLUMN  international SET NOT NULL,
+  ALTER COLUMN  canada SET NOT NULL,
+  ALTER COLUMN  newBrunswick  SET NOT NULL,
+  ALTER COLUMN  novaScotia  SET NOT NULL,
+  ALTER COLUMN  quebec SET NOT NULL,
+  ALTER COLUMN  princeEdwardIsland  SET NOT NULL,
+  ALTER COLUMN  newfoundland  SET NOT NULL,
+  ALTER COLUMN  labrador  SET NOT NULL,
+  ALTER COLUMN  national  SET NOT NULL,
+  ALTER COLUMN  regionalOrState  SET NOT NULL,
+  ALTER COLUMN  newEngland SET NOT NULL,
+  ALTER COLUMN  maine  SET NOT NULL,
+  ALTER COLUMN  newHampshire  SET NOT NULL,
+  ALTER COLUMN  massachusetts  SET NOT NULL,
+  ALTER COLUMN  vermont  SET NOT NULL,
+  ALTER COLUMN  connecticut  SET NOT NULL,
+  ALTER COLUMN  rhodeIsland  SET NOT NULL,
+  ALTER COLUMN  midAtlantic  SET NOT NULL,
+  ALTER COLUMN  newYork  SET NOT NULL,
+  ALTER COLUMN  newJersey  SET NOT NULL,
+  ALTER COLUMN  pennsylvania  SET NOT NULL,
+  ALTER COLUMN  marlyland  SET NOT NULL,
+  ALTER COLUMN  delaware  SET NOT NULL,
+  ALTER COLUMN  virginia  SET NOT NULL,
+  ALTER COLUMN  central  SET NOT NULL,
+  ALTER COLUMN  districtOfColumbia SET NOT NULL, 
+  ALTER COLUMN  westVirginia  SET NOT NULL,
+  ALTER COLUMN  greatLakes  SET NOT NULL,
+  ALTER COLUMN  ohio  SET NOT NULL,
+  ALTER COLUMN  southEast  SET NOT NULL,
+  ALTER COLUMN  northCarolina  SET NOT NULL,
+  ALTER COLUMN  southCarolina  SET NOT NULL, 
+  ALTER COLUMN  localCity  SET NOT NULL,
+  ALTER COLUMN  problemFocused SET NOT NULL;
+ALTER TABLE org
+  ADD COLUMN  province BOOLEAN,
+  ADD COLUMN  atlanticCanada BOOLEAN,
+  ADD COLUMN  gulfOfMaine BOOLEAN;
+UPDATE org SET
+  province = false,
+  atlanticCanada = false,
+  gulfOfMaine = false;
+ALTER TABLE org
+ ALTER COLUMN  province SET NOT NULL,
+ ALTER COLUMN  atlanticCanada SET NOT NULL,
+ ALTER COLUMN  gulfOfMaine SET NOT NULL;
+ALTER TABLE paw
+  ADD COLUMN  atlanticCanada BOOLEAN,
+  ADD COLUMN  gulfOfMaine BOOLEAN;
+UPDATE paw SET
+  atlanticCanada = false,
+  gulfOfMaine = false;
+ALTER TABLE paw
+ ALTER COLUMN  atlanticCanada SET NOT NULL,
+ ALTER COLUMN  gulfOfMaine SET NOT NULL;
+ALTER TABLE dap
+  ADD COLUMN  atlanticCanada BOOLEAN,
+  ADD COLUMN  gulfOfMaine BOOLEAN;
+UPDATE dap SET
+  atlanticCanada = false,
+  gulfOfMaine = false;
+ALTER TABLE dap
+ ALTER COLUMN  atlanticCanada SET NOT NULL,
+ ALTER COLUMN  gulfOfMaine SET NOT NULL;
+ALTER TABLE need
+  ADD COLUMN  atlanticCanada BOOLEAN,
+  ADD COLUMN  gulfOfMaine BOOLEAN;
+UPDATE need SET
+  atlanticCanada = false,
+  gulfOfMaine = false;
+ALTER TABLE need
+ ALTER COLUMN  atlanticCanada SET NOT NULL,
+ ALTER COLUMN  gulfOfMaine SET NOT NULL;
+
+ 
+  
+
+

@@ -132,6 +132,9 @@ public class Dap
 	private boolean localCity  = false;
 	private boolean problemFocused = false;
 	
+	private boolean atlanticCanada = false;
+	private boolean gulfOfMaine = false;
+
 	
 	/////////////////////////////////////////////
 	//Sector
@@ -587,6 +590,21 @@ public class Dap
 	public void setNewJersey(boolean newJersey) {
 		this.newJersey = newJersey;
 	}
+	
+	
+	public boolean isAtlanticCanada() {
+		return atlanticCanada;
+	}
+	public void setAtlanticCanada(boolean atlanticCanada) {
+		this.atlanticCanada = atlanticCanada;
+	}
+	public boolean isGulfOfMaine() {
+		return gulfOfMaine;
+	}
+	public void setGulfOfMaine(boolean gulfOfMaine) {
+		this.gulfOfMaine = gulfOfMaine;
+	}	
+
 	public boolean isPennsylvania() {
 		return pennsylvania;
 	}

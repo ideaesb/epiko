@@ -3,7 +3,7 @@
       xmlns:p="tapestry:parameter">
 
  <body>
-  <h1>Partners &amp; Programs</h1>
+  <h1>Organizations</h1>
    <div align="center">
        <form t:type="Form" t:id="searchForm">
          <input t:type="TextField" t:id="searchText" size="30" value="searchText" />    
@@ -33,7 +33,7 @@
        </t:if>
     </p:descriptionCell>
      <p:empty>
-       <p>There are no Partners &amp; Programs (matching the criteria); you can <t:pagelink page="org/${editMode}">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
+       <p>There are no Organizations (matching the criteria); you can <t:pagelink page="org/${editMode}">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
      </p:empty>
   </t:grid>
   </div>

@@ -152,6 +152,10 @@ public class Need
 	private boolean localCity  = false;
 	private boolean problemFocused = false;
 	
+	private boolean atlanticCanada = false;
+	private boolean gulfOfMaine = false;
+
+	
 	
 	/////////////////////////////////////////////
 	//Sector
@@ -527,6 +531,21 @@ public class Need
 	public void setConservation(boolean conservation) {
 		this.conservation = conservation;
 	}
+	
+	
+	public boolean isAtlanticCanada() {
+		return atlanticCanada;
+	}
+	public void setAtlanticCanada(boolean atlanticCanada) {
+		this.atlanticCanada = atlanticCanada;
+	}
+	public boolean isGulfOfMaine() {
+		return gulfOfMaine;
+	}
+	public void setGulfOfMaine(boolean gulfOfMaine) {
+		this.gulfOfMaine = gulfOfMaine;
+	}	
+
 	public boolean isInternational() {
 		return international;
 	}

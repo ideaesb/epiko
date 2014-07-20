@@ -2,7 +2,7 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
 
-    <h1>Worksheets Version April 27, 2012</h1>
+    <h1>Worksheets Version May 15, 2014</h1>
     
     <form t:type="form" t:id="searchCriteria">
     
@@ -24,8 +24,8 @@
     </ul>
 
     <ul>
-      <li><t:pagelink page="orgs">List, View, Search All <strong>Partners &amp; Programs</strong> Worksheets</t:pagelink></li>
-      <li><t:pagelink page="org/${editMode}" context="0">Creat A New <strong>Partners &amp; Programs</strong> Worksheet</t:pagelink></li>
+      <li><t:pagelink page="orgs">List, View, Search All <strong>Organizations</strong> Worksheets</t:pagelink></li>
+      <li><t:pagelink page="org/${editMode}" context="0">Creat A New <strong>Organization</strong> Worksheet</t:pagelink></li>
     </ul>
 
     <ul>

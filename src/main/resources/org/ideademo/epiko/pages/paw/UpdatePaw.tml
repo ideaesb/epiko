@@ -93,10 +93,13 @@
                    <t:checkbox t:id="quebec" t:value="paw.quebec" /><t:label for="quebec" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    <t:checkbox t:id="princeEdwardIsland" t:value="paw.princeEdwardIsland" class="indent" /><t:label for="princeEdwardIsland" class="padr" />
                    <t:checkbox t:id="newfoundland" t:value="paw.newfoundland" /><t:label for="newfoundland" class="padr" />
-                   <t:checkbox t:id="labrador" t:value="paw.labrador" /><t:label for="labrador" /><br />
-                
+                   <t:checkbox t:id="labrador" t:value="paw.labrador" /><t:label for="labrador" class="padr" />
+                   <t:checkbox t:id="atlanticCanada" t:value="paw.atlanticCanada" /><t:label for="atlanticCanada" /><br />
+                   
                  <t:checkbox t:id="national" t:value="paw.national" /><t:label for="national" class="padr"/>
-                 <t:checkbox t:id="regionalOrState" t:value="paw.regionalOrState" /><t:label for="regionalOrState" /><br />
+                 <t:checkbox t:id="regionalOrState" t:value="paw.regionalOrState" /><t:label for="regionalOrState" class="padr" />
+                 <t:checkbox t:id="gulfOfMaine" t:value="paw.gulfOfMaine" /><t:label for="gulfOfMaine" /><br />
+                 
                    <t:checkbox t:id="newEngland" t:value="paw.newEngland" class="indent" /><t:label for="newEngland" class="padr" />
                    <t:checkbox t:id="maine" t:value="paw.maine" /><t:label for="maine" class="padr" />
                    <t:checkbox t:id="newHampshire" t:value="paw.newHampshire" /><t:label for="newHampshire" class="padr" />

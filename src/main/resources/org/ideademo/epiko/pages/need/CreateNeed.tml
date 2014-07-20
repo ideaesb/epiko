@@ -158,6 +158,7 @@
 
 		<t:checkbox t:id="international" t:value="need.international"  class="element checkbox" /><t:label for="international" class="choice" />
 		<t:checkbox t:id="canada" t:value="need.canada"  class="element checkbox indent" /><t:label for="canada" class="indent" />
+		<t:checkbox t:id="atlanticCanada" t:value="need.atlanticCanada"  class="element checkbox indent" /><t:label for="atlanticCanada" class="indent" />
 		<t:checkbox t:id="newBrunswick" t:value="need.newBrunswick"  class="element checkbox indent2" /><t:label for="newBrunswick" class="indent2" />
 		<t:checkbox t:id="novaScotia" t:value="need.novaScotia"  class="element checkbox indent2" /><t:label for="novaScotia" class="indent2" />
 		<t:checkbox t:id="quebec" t:value="need.quebec"  class="element checkbox indent2" /><t:label for="quebec" class="indent2" />
@@ -166,6 +167,7 @@
 		<t:checkbox t:id="labrador" t:value="need.labrador"  class="element checkbox indent2" /><t:label for="labrador" class="indent2" />
 		<t:checkbox t:id="national" t:value="need.national"  class="element checkbox" /><t:label for="national" class="choice" />
 		<t:checkbox t:id="regionalOrState" t:value="need.regionalOrState"  class="element checkbox" /><t:label for="regionalOrState" class="choice" />
+		<t:checkbox t:id="gulfOfMaine" t:value="need.gulfOfMaine"  class="element checkbox indent" /><t:label for="gulfOfMaine" class="indent" />
 		<t:checkbox t:id="newEngland" t:value="need.newEngland"  class="element checkbox indent" /><t:label for="newEngland" class="indent" />
 		<t:checkbox t:id="maine" t:value="need.maine"  class="element checkbox indent2" /><t:label for="maine" class="indent2" />
 		<t:checkbox t:id="newHampshire" t:value="need.newHampshire"  class="element checkbox indent2" /><t:label for="newHampshire" class="indent2" />

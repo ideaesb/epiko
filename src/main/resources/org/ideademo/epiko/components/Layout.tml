@@ -16,7 +16,7 @@
 	  <li class="Needs"><t:pagelink page="needs">Needs Worksheets</t:pagelink></li>
 	  <li class="Daps"><t:pagelink page="daps">Data, Products &amp; Services</t:pagelink></li>
 	  <li class="Paws"><t:pagelink page="paws">Projects &amp; Activities</t:pagelink></li>
-	  <li class="Orgs"><t:pagelink page="orgs">Partners &amp; Programs</t:pagelink></li>
+	  <li class="Orgs"><t:pagelink page="orgs">Organizations</t:pagelink></li>
 	  <li class="Bibs"><t:pagelink page="bibs">Bibliography &amp; Assessments</t:pagelink></li>
      
      </ul>
